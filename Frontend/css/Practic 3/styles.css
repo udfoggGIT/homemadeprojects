@@ -1,0 +1,96 @@
+:root {
+    --primary-font: 'Inter'
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    background-color: #282828;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section__main {
+    background-color: #fff;
+    width: 470px;
+    height: 282px;
+    border-radius: 12px;
+}
+
+.section__main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 16px;   
+}
+
+.section__main-header-head {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.section__main-header-content {
+    font-weight: 400;
+    font-size: 16px;
+    color: #5F6980;
+    text-align: center;
+    line-height: 26px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section__main-header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.section__main-header-buttons button {
+    transition: transform 0.1 ease;
+}
+
+.section__main-header-buttons button:active {
+    transform: scale(0.99);
+}
+
+.section__main-header-buttons-cancel {
+    width: 12rem;
+    height: 3.5rem;
+    border: 2px solid;
+    border-color: #5F6980;
+    border-radius: 6px;
+    color: #5F6980;
+}
+
+.section__main-header-buttons-proceed {
+    width: 12rem;
+    height: 3.5rem;
+    border-radius: 6px;
+    background-color: #FD7E14;
+    color: #fff;
+}

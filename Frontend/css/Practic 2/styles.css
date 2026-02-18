@@ -1,0 +1,151 @@
+:root {
+    --primary-font: 'Gilroy'
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(./fonts/Gilroy-Light.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8rem;
+}
+
+.header__logo img {
+    width: 11rem;
+    height: auto;
+    display: block;
+}
+
+.header__nav {
+    padding: 0 4rem;
+}
+
+.header__nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+}
+
+.header__nav-links a {
+    color: #3A3845;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__nav-links a.active {
+    color:#C69B7B;
+}
+
+.header__nav-links a::after,
+.header__nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    width: 120%;
+    height: 2px;
+    background-color: #C69B7B;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.header__nav-links a:active::after,
+.header__nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.header__nav-links a:active {
+    color: #C69B7B;
+}
+
+.header__input-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(229, 229, 229, 1);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #fff;
+    width: 320px;
+    margin-right: 1rem;
+    margin-right: 2rem;
+    transition: all 0.3 ease;
+}
+
+.header__input-search:focus-within {
+    border-color: black;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.header__input-search svg {
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.header__input-search:focus-within svg path {
+    stroke: black;
+}
+
+.header__input-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__icons svg {
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+
+.header__icons svg:active {
+    transform: scale(0.9);
+}
+
+.header__icons-heart svg {
+   width: 1.5rem;
+   height: auto;
+   display: block;
+}
+
+.header__icons-basket svg {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+}
+
+.header__icons-profile svg {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+}

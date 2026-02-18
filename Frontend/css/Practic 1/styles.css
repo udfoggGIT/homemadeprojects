@@ -1,0 +1,123 @@
+:root {
+    /*Шрифт*/
+    --primary-font: 'Gilroy';
+    --primary-font-width: 400;
+    --secondary-font-width: 600;
+    /*Цвета*/
+    --primary-color: #20264C;
+    --secondary-color: #515674;
+    --accent-color: #FF941A;
+    /*Размеры*/
+    --max-width: 1200px;
+    --padding: 24px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(./fonts/Gilroy-Light.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(./fonts/Gilroy-Light.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-weight: var(--primary-font-width);
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: #FFF;
+}
+
+.container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--padding);
+}
+
+.comments {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.comments__tittle {
+    font-weight: var(--secondary-font-width);
+    font-size: 2.5rem;
+}
+
+.comments__users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.comments__users-item {
+    flex: 1 1 350px;
+    max-width: 400px;
+    background-color: #FFF;
+    padding: var(--padding);
+    gap: 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(106, 99, 118, 0.1);
+    text-align: left;
+}
+
+.comments__users-comment {
+    font-size: 1rem;
+}
+
+.comments__users-image-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.comments__image {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.comments__users-person-name {
+    display: flex;
+    flex-direction: column;
+
+}
+.comments__image-coment {
+    font-weight: var(--secondary-font-width);
+    font-size: 1.125rem;
+}
+
+.comments__image-comment2 {
+    font-display: block;
+    font-size: 1rem;
+    font-weight: var(--primary-font-width);
+    color: var(--secondary-color);
+    
+}
